@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+          h2{
+            justify-content: center;
+            }
+            .container{
+            display:grid;
+            justify-content: center;
+            align-items:center;
+            background-color:yellow;
+            border:5px solid green;
+           
+            margin-top:15%;
+            height:250px;
+            width:250px;
+            margin-left:45%;
+            }
+            
+
+    </style>
+</head>
+<body>
+        <div class="container">
+        
+        <div class="login-container">
+         <h2>Login</h2>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <input type="text" id="username" placeholder="Username" required><br/><br/>
+            <input type="password" id="password" placeholder="Password" required><br/><br/>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+   </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            // You can replace the following with actual login logic
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Example validation (replace with your logic)
+            if (username === "Admin" && password === "ranja123" || password === "tunutunu") {
+                // Redirect to the registration form page
+                window.location.href = "https://regform-ecru.vercel.app/"; // Update this to your registration form's filename
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
